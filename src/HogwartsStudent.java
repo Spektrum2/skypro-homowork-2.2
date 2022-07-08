@@ -1,9 +1,9 @@
-public abstract class Hogwarts {
+public abstract class HogwartsStudent {
     private String student;
     private int powerOfMagic;
     private int transgression;
 
-    public Hogwarts(String student, int powerOfMagic, int transgression) {
+    public HogwartsStudent(String student, int powerOfMagic, int transgression) {
         this.student = student;
         this.powerOfMagic = powerOfMagic;
         this.transgression = transgression;
@@ -44,7 +44,7 @@ public abstract class Hogwarts {
         this.transgression = transgression;
     }
 
-    public void compareStudent(Hogwarts pupil) {
+    public void compareStudent(HogwartsStudent pupil) {
         if (powerOfMagic > pupil.getPowerOfMagic()) {
             System.out.println(student + " обладает большей мощностью магии, чем " + pupil.getStudent());
         } else if (powerOfMagic == pupil.getPowerOfMagic()) {

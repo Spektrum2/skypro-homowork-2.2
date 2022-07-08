@@ -1,9 +1,9 @@
-public class Hufflepuff extends Hogwarts {
+public class HufflepuffStudent extends HogwartsStudent {
     private int diligence;
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff(String student, int powerOfMagic, int transgression, int diligence, int loyalty, int honesty) {
+    public HufflepuffStudent(String student, int powerOfMagic, int transgression, int diligence, int loyalty, int honesty) {
         super(student, powerOfMagic, transgression);
         this.diligence = diligence;
         this.loyalty = loyalty;
@@ -43,7 +43,7 @@ public class Hufflepuff extends Hogwarts {
         this.honesty = honesty;
     }
 
-    public void compareStudentFaculty(Hufflepuff student) {
+    public void compareStudentFaculty(HufflepuffStudent student) {
         int point1 = diligence + loyalty + honesty;
         int point2 = student.getDiligence() + student.getLoyalty() + student.getHonesty();
         if (point1 > point2) {

@@ -1,10 +1,10 @@
-public class Ravenclaw extends Hogwarts {
+public class RavenclawStudent extends HogwartsStudent {
     private int intelligence;
     private int wisdom;
     private int wit;
     private int creativity;
 
-    public Ravenclaw(String student, int powerOfMagic, int transgression, int intelligence, int wisdom, int wit, int creativity) {
+    public RavenclawStudent(String student, int powerOfMagic, int transgression, int intelligence, int wisdom, int wit, int creativity) {
         super(student, powerOfMagic, transgression);
         this.intelligence = intelligence;
         this.wisdom = wisdom;
@@ -56,7 +56,7 @@ public class Ravenclaw extends Hogwarts {
         this.creativity = creativity;
     }
 
-    public void compareStudentFaculty(Ravenclaw student) {
+    public void compareStudentFaculty(RavenclawStudent student) {
         int point1 = intelligence + wisdom + wit + creativity;
         int point2 = student.getIntelligence() + student.getWisdom() + student.getWit() + student.getCreativity();
         if (point1 > point2) {

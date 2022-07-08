@@ -1,11 +1,11 @@
-public class Slytherin extends Hogwarts {
+public class SlytherinStudent extends HogwartsStudent {
     private int cunning;
     private int determination;
     private int ambition;
     private int resourcefulness;
     private int lustForPower;
 
-    public Slytherin(String student, int powerOfMagic, int transgression, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
+    public SlytherinStudent(String student, int powerOfMagic, int transgression, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
         super(student, powerOfMagic, transgression);
         this.cunning = cunning;
         this.determination = determination;
@@ -69,7 +69,7 @@ public class Slytherin extends Hogwarts {
         this.lustForPower = lustForPower;
     }
 
-    public void compareStudentFaculty(Slytherin student) {
+    public void compareStudentFaculty(SlytherinStudent student) {
         int point1 = cunning + determination + ambition + resourcefulness + lustForPower;
         int point2 = student.getCunning() + student.getDetermination() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower();
         if (point1 > point2) {

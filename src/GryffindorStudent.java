@@ -1,10 +1,10 @@
-public class Gryffindor extends Hogwarts {
+public class GryffindorStudent extends HogwartsStudent {
     private int nobility;
     private int honor;
     private int bravery;
 
 
-    public Gryffindor(String student, int powerOfMagic, int transgression, int nobility, int honor, int bravery) {
+    public GryffindorStudent(String student, int powerOfMagic, int transgression, int nobility, int honor, int bravery) {
         super(student, powerOfMagic, transgression);
         this.nobility = nobility;
         this.honor = honor;
@@ -44,7 +44,7 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
-    public void compareStudentFaculty(Gryffindor student) {
+    public void compareStudentFaculty(GryffindorStudent student) {
         int point1 = nobility + honor + bravery;
         int point2 = student.getNobility() + student.getHonor() + student.getBravery();
         if (point1 > point2) {
