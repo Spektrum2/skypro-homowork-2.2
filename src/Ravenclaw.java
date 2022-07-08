@@ -1,4 +1,4 @@
-public class Ravenclaw extends Hogwarts{
+public class Ravenclaw extends Hogwarts {
     private int intelligence;
     private int wisdom;
     private int wit;
@@ -54,5 +54,28 @@ public class Ravenclaw extends Hogwarts{
             throw new IllegalArgumentException("Оценка указана не верно. Укажите оценку от 0 до 100");
         }
         this.creativity = creativity;
+    }
+
+    public void compareStudentFaculty(Ravenclaw student) {
+        int point1 = intelligence + wisdom + wit + creativity;
+        int point2 = student.getIntelligence() + student.getWisdom() + student.getWit() + student.getCreativity();
+        if (point1 > point2) {
+            System.out.println(this.getStudent() + " лучший Когтевранец, чем " + student.getStudent());
+        } else if (point1 == point2) {
+            System.out.println("У " + this.getStudent() + " и " + student.getStudent() + "силы равны");
+        } else {
+            System.out.println(student.getStudent() + " лучший Когтевранец, чем " + this.getStudent());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Студент - " + this.getStudent() +
+                "; Сила магии - " + this.getPowerOfMagic() +
+                "; Расстояние трансгрессии - " + this.getTransgression() +
+                "; Ум - " + intelligence +
+                "; Мудрость - " + wisdom +
+                "; Остроумие - " + wit +
+                "; Творчество - " + creativity;
     }
 }

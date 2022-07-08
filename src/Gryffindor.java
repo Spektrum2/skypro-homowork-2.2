@@ -1,4 +1,4 @@
-public class Gryffindor extends Hogwarts{
+public class Gryffindor extends Hogwarts {
     private int nobility;
     private int honor;
     private int bravery;
@@ -42,5 +42,28 @@ public class Gryffindor extends Hogwarts{
             throw new IllegalArgumentException("Оценка указана не верно. Укажите оценку от 0 до 100");
         }
         this.bravery = bravery;
+    }
+
+    public void compareStudentFaculty(Gryffindor student) {
+        int point1 = nobility + honor + bravery;
+        int point2 = student.getNobility() + student.getHonor() + student.getBravery();
+        if (point1 > point2) {
+            System.out.println(this.getStudent() + " лучший Гриффиндорец, чем " + student.getStudent());
+        } else if (point1 == point2) {
+            System.out.println("У " + this.getStudent() + " и " + student.getStudent() + "силы равны");
+        } else {
+            System.out.println(student.getStudent() + " лучший Гриффиндорец, чем " + this.getStudent());
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Студент - " + this.getStudent() +
+                "; Сила магии - " + this.getPowerOfMagic() +
+                "; Расстояние трансгрессии - " + this.getTransgression() +
+                "; Благородство - " + nobility +
+                "; Честь - " + honor +
+                "; Храбрость - " + bravery;
     }
 }

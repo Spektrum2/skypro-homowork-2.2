@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
     private String student;
     private int powerOfMagic;
     private int transgression;
@@ -10,7 +10,7 @@ public class Hogwarts {
     }
 
     public void printStudent() {
-        System.out.println(student);
+        System.out.println(this);
     }
 
 
@@ -44,10 +44,20 @@ public class Hogwarts {
         this.transgression = transgression;
     }
 
-    @Override
-    public String toString() {
-        return "Студент - " + student +
-                ", Сила магии - " + powerOfMagic +
-                ", Расстояние трансгрессии - " + transgression;
+    public void compareStudent(Hogwarts pupil) {
+        if (powerOfMagic > pupil.getPowerOfMagic()) {
+            System.out.println(student + " обладает большей мощностью магии, чем " + pupil.getStudent());
+        } else if (powerOfMagic == pupil.getPowerOfMagic()) {
+            System.out.println("У " + student + " и " + pupil.getStudent() + "силы магии равны");
+        } else {
+            System.out.println(pupil.getStudent() + " обладает большей мощностью магии, чем " + student);
+        }
+        if (transgression > pupil.getTransgression()) {
+            System.out.println(student + " расстояние трансгрессии дальше, чем " + pupil.getStudent());
+        } else if (transgression == pupil.getTransgression()) {
+            System.out.println(student + " и " + pupil.getStudent() + "могут трансгрессировать на одинаковое расстояние");
+        } else {
+            System.out.println(pupil.getStudent() + " расстояние трансгрессии дальше, чем " + student);
+        }
     }
 }

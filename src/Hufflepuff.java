@@ -1,4 +1,4 @@
-public class Hufflepuff extends Hogwarts{
+public class Hufflepuff extends Hogwarts {
     private int diligence;
     private int loyalty;
     private int honesty;
@@ -41,5 +41,28 @@ public class Hufflepuff extends Hogwarts{
             throw new IllegalArgumentException("Оценка указана не верно. Укажите оценку от 0 до 100");
         }
         this.honesty = honesty;
+    }
+
+    public void compareStudentFaculty(Hufflepuff student) {
+        int point1 = diligence + loyalty + honesty;
+        int point2 = student.getDiligence() + student.getLoyalty() + student.getHonesty();
+        if (point1 > point2) {
+            System.out.println(this.getStudent() + " лучший Пуффендуец, чем " + student.getStudent());
+        } else if (point1 == point2) {
+            System.out.println("У " + this.getStudent() + " и " + student.getStudent() + "силы равны");
+        } else {
+            System.out.println(student.getStudent() + " лучший Пуффендуец, чем " + this.getStudent());
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Студент - " + this.getStudent() +
+                "; Сила магии - " + this.getPowerOfMagic() +
+                "; Расстояние трансгрессии - " + this.getTransgression() +
+                "; Трудолюбие - " + diligence +
+                "; Верность - " + loyalty +
+                "; Искренность - " + honesty;
     }
 }

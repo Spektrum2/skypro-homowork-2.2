@@ -1,4 +1,4 @@
-public class Slytherin extends Hogwarts{
+public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -67,5 +67,29 @@ public class Slytherin extends Hogwarts{
             throw new IllegalArgumentException("Оценка указана не верно. Укажите оценку от 0 до 100");
         }
         this.lustForPower = lustForPower;
+    }
+
+    public void compareStudentFaculty(Slytherin student) {
+        int point1 = cunning + determination + ambition + resourcefulness + lustForPower;
+        int point2 = student.getCunning() + student.getDetermination() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower();
+        if (point1 > point2) {
+            System.out.println(this.getStudent() + " лучший Слизеринец, чем " + student.getStudent());
+        } else if (point1 == point2) {
+            System.out.println("У " + this.getStudent() + " и " + student.getStudent() + "силы равны");
+        } else {
+            System.out.println(student.getStudent() + " лучший Слизеринец, чем " + this.getStudent());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Студент - " + this.getStudent() +
+                "; Сила магии - " + this.getPowerOfMagic() +
+                "; Расстояние трансгрессии - " + this.getTransgression() +
+                "; Хитрость - " + cunning +
+                "; Решительность - " + determination +
+                "; Амбициозность - " + ambition +
+                "; Находчивость - " + resourcefulness +
+                "; Жажда власти - " + lustForPower;
     }
 }
