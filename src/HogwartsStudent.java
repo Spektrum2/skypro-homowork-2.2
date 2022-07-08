@@ -27,8 +27,8 @@ public abstract class HogwartsStudent {
     }
 
     public void setPowerOfMagic(int powerOfMagic) {
-        if (powerOfMagic < 0 || powerOfMagic > 200) {
-            throw new IllegalArgumentException("Магическая сила указана не верно. Укажите магическую силу от 0 до 200");
+        if (powerOfMagic < 0 || powerOfMagic > 100) {
+            throw new IllegalArgumentException("Магическая сила указана не верно. Укажите магическую силу от 0 до 100");
         }
         this.powerOfMagic = powerOfMagic;
     }
@@ -38,26 +38,21 @@ public abstract class HogwartsStudent {
     }
 
     public void setTransgression(int transgression) {
-        if (powerOfMagic < 0 || powerOfMagic > 3000) {
-            throw new IllegalArgumentException("Расстояние трансгрессии указана не верно. Укажите расстояние трансгрессии от 0 до 3000");
+        if (powerOfMagic < 0 || powerOfMagic > 100) {
+            throw new IllegalArgumentException("Расстояние трансгрессии указана не верно. Укажите расстояние трансгрессии от 0 до 100");
         }
         this.transgression = transgression;
     }
 
     public void compareStudent(HogwartsStudent pupil) {
-        if (powerOfMagic > pupil.getPowerOfMagic()) {
-            System.out.println(student + " обладает большей мощностью магии, чем " + pupil.getStudent());
-        } else if (powerOfMagic == pupil.getPowerOfMagic()) {
-            System.out.println("У " + student + " и " + pupil.getStudent() + "силы магии равны");
+        int point1 = powerOfMagic + transgression;
+        int point2 = pupil.powerOfMagic + pupil.transgression;
+        if (point1 > point2) {
+            System.out.println(student + " лучший студент, чем " + pupil.getStudent());
+        } else if (point1 == point2) {
+            System.out.println("У " + student + " и " + pupil.getStudent() + "силы равны");
         } else {
-            System.out.println(pupil.getStudent() + " обладает большей мощностью магии, чем " + student);
-        }
-        if (transgression > pupil.getTransgression()) {
-            System.out.println(student + " расстояние трансгрессии дальше, чем " + pupil.getStudent());
-        } else if (transgression == pupil.getTransgression()) {
-            System.out.println(student + " и " + pupil.getStudent() + "могут трансгрессировать на одинаковое расстояние");
-        } else {
-            System.out.println(pupil.getStudent() + " расстояние трансгрессии дальше, чем " + student);
+            System.out.println(pupil.getStudent() + " лучший студент, чем " + student);
         }
     }
 }
