@@ -1,31 +1,12 @@
-public class Bicycle implements  Service{
-    private String modelName;
-    private int wheelsCount;
+public class Bicycle extends Transport implements  Service{
 
     public Bicycle(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+        super(modelName, wheelsCount);
     }
 
     @Override
     public void service() {
-        System.out.println("Обслуживаем " + modelName);
+        System.out.println("Обслуживаем " + this.getModelName());
         System.out.println("Меняем покрышку");
 
     }
