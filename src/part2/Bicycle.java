@@ -9,7 +9,8 @@ public class Bicycle extends Transport implements Service {
     @Override
     public void service() {
         System.out.println("Обслуживаем " + this.getModelName());
-        System.out.println("Меняем покрышку");
-
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
     }
 }
