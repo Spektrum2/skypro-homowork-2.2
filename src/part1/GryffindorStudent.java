@@ -1,3 +1,5 @@
+package part1;
+
 public class GryffindorStudent extends HogwartsStudent {
     private int nobility;
     private int honor;

@@ -1,3 +1,5 @@
+package part1;
+
 public abstract class HogwartsStudent {
     private String student;
     private int powerOfMagic;

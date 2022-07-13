@@ -1,3 +1,5 @@
+package part1;
+
 public class RavenclawStudent extends HogwartsStudent {
     private int intelligence;
     private int wisdom;

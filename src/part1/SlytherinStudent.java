@@ -1,3 +1,5 @@
+package part1;
+
 public class SlytherinStudent extends HogwartsStudent {
     private int cunning;
     private int determination;

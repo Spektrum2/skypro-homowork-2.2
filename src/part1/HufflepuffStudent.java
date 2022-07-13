@@ -1,3 +1,5 @@
+package part1;
+
 public class HufflepuffStudent extends HogwartsStudent {
     private int diligence;
     private int loyalty;
