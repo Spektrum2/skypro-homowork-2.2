@@ -23,10 +23,6 @@ public abstract class Transport {
         this.wheelsCount = wheelsCount;
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
     @Override
     public String toString() {
         return " Модель - " + modelName +

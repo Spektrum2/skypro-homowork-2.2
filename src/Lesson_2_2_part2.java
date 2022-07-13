@@ -15,8 +15,5 @@ public class Lesson_2_2_part2 {
         serviceStation.check(truck2);
         serviceStation.check(bicycle);
         serviceStation.check(bicycle2);
-
-
-
     }
 }
