@@ -1,3 +1,5 @@
+package part2;
+
 public abstract class Transport {
     private String modelName;
     private int wheelsCount;

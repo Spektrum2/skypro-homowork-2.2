@@ -1,3 +1,5 @@
+package part2;
+
 public class Truck extends Transport implements Service {
 
 

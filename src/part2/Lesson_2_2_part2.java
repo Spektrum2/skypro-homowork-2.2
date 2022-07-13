@@ -1,3 +1,5 @@
+package part2;
+
 public class Lesson_2_2_part2 {
     public static void main(String[] args) {
         Service car = new Car("car1",4);

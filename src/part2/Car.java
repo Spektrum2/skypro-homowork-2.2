@@ -1,6 +1,9 @@
-public class Bicycle extends Transport implements Service {
+package part2;
 
-    public Bicycle(String modelName, int wheelsCount) {
+public class Car extends Transport implements Service {
+
+
+    public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
@@ -8,6 +11,6 @@ public class Bicycle extends Transport implements Service {
     public void service() {
         System.out.println("Обслуживаем " + this.getModelName());
         System.out.println("Меняем покрышку");
-
+        System.out.println("Проверяем двигатель");
     }
 }
