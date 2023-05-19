@@ -147,7 +147,7 @@
 - 5-й блок кода. Общий пример
     
     ```java
-public class Main {
+  public class Main {
     public static void main(String[] args) {
         Car car = new Car();
         Car car2 = new Car();
@@ -178,6 +178,6 @@ public class Main {
         station.check(null, null, truck);
         station.check(null, null, truck2);
     }
-}
+  }
 ```
  
