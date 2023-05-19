@@ -145,7 +145,8 @@
     ```
     
 - 5-й блок кода. Общий пример
-```java
+    
+    ```java
 public class Main {
     public static void main(String[] args) {
         Car car = new Car();
@@ -179,3 +180,4 @@ public class Main {
     }
 }
 ```
+ 
