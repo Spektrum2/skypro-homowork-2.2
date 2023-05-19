@@ -92,10 +92,7 @@
         }
     }
     ```
-    
-    Файл с кодом:
-    
-    [Car.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8762732b-a986-4604-b5a8-1fa2f4d533e4/Car.java)
+
     
 - 3-й блок кода. Пример с сервисной станцией
     
@@ -125,10 +122,6 @@
     }
     ```
     
-    Файл с кодом:
-    
-    [ServiceStation.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/96bb1091-d13a-492d-96f6-bc214fb99a1c/ServiceStation.java)
-    
 - 4-й блок кода. Пример с грузовой машиной
     
     ```java
@@ -151,8 +144,38 @@
     }
     ```
     
-    Файл с кодом:
-    
-    [Truck.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64fe622a-362b-47e9-a720-01d5c2ded34e/Truck.java)
-    
 - 5-й блок кода. Общий пример
+```java
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car();
+        Car car2 = new Car();
+        car.modelName = "car1";
+        car2.modelName = "car2";
+        car.wheelsCount = 4;
+        car2.wheelsCount = 4;
+
+        Truck truck = new Truck();
+        Truck truck2 = new Truck();
+        truck.modelName = "truck1";
+        truck2.modelName = "truck2";
+        truck.wheelsCount = 6;
+        truck2.wheelsCount = 8;
+
+        Bicycle bicycle = new Bicycle();
+        Bicycle bicycle2 = new Bicycle();
+        bicycle.modelName = "bicycle1";
+        bicycle2.modelName = "bicycle2";
+        bicycle.wheelsCount = 2;
+        bicycle2.wheelsCount = 2;
+
+        ServiceStation station = new ServiceStation();
+        station.check(car, null, null);
+        station.check(car2, null, null);
+        station.check(null, bicycle, null);
+        station.check(null, bicycle2, null);
+        station.check(null, null, truck);
+        station.check(null, null, truck2);
+    }
+}
+```
