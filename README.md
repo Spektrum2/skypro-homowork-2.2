@@ -57,6 +57,8 @@
 
 ### Обязательные для выполнения блоки кода
 
+### Обязательные для выполнения блоки кода
+
 - 1-й блок кода. Пример с велосипедом
     
     ```java
@@ -70,11 +72,7 @@
         }
     }
     ```
-    
-    Файл с кодом: 
-    
-    [Bicycle.java](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3bb550a5-1e81-4f8c-8075-f4a1f1aa3fbd/Bicycle.java)
-    
+        
 - 2-й блок кода. Пример с машиной
     
     ```java
@@ -92,8 +90,7 @@
         }
     }
     ```
-
-    
+     
 - 3-й блок кода. Пример с сервисной станцией
     
     ```java
@@ -121,7 +118,7 @@
         }
     }
     ```
-    
+     
 - 4-й блок кода. Пример с грузовой машиной
     
     ```java
@@ -143,41 +140,40 @@
         }
     }
     ```
-    
+     
 - 5-й блок кода. Общий пример
     
     ```java
-  public class Main {
-    public static void main(String[] args) {
-        Car car = new Car();
-        Car car2 = new Car();
-        car.modelName = "car1";
-        car2.modelName = "car2";
-        car.wheelsCount = 4;
-        car2.wheelsCount = 4;
-
-        Truck truck = new Truck();
-        Truck truck2 = new Truck();
-        truck.modelName = "truck1";
-        truck2.modelName = "truck2";
-        truck.wheelsCount = 6;
-        truck2.wheelsCount = 8;
-
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
-        bicycle.modelName = "bicycle1";
-        bicycle2.modelName = "bicycle2";
-        bicycle.wheelsCount = 2;
-        bicycle2.wheelsCount = 2;
-
-        ServiceStation station = new ServiceStation();
-        station.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
+    public class Main {
+        public static void main(String[] args) {
+            Car car = new Car();
+            Car car2 = new Car();
+            car.modelName = "car1";
+            car2.modelName = "car2";
+            car.wheelsCount = 4;
+            car2.wheelsCount = 4;
+    
+            Truck truck = new Truck();
+            Truck truck2 = new Truck();
+            truck.modelName = "truck1";
+            truck2.modelName = "truck2";
+            truck.wheelsCount = 6;
+            truck2.wheelsCount = 8;
+    
+            Bicycle bicycle = new Bicycle();
+            Bicycle bicycle2 = new Bicycle();
+            bicycle.modelName = "bicycle1";
+            bicycle2.modelName = "bicycle2";
+            bicycle.wheelsCount = 2;
+            bicycle2.wheelsCount = 2;
+    
+            ServiceStation station = new ServiceStation();
+            station.check(car, null, null);
+            station.check(car2, null, null);
+            station.check(null, bicycle, null);
+            station.check(null, bicycle2, null);
+            station.check(null, null, truck);
+            station.check(null, null, truck2);
+        }
     }
-  }
-```
- 
+    ```
